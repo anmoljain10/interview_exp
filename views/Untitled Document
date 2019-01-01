@@ -1,0 +1,14 @@
+<html>
+<head>
+<% include partials/head %>
+<style>
+body
+{
+background-image:url('abc.jpg');
+}
+</style>
+</head>
+<body>
+<h1>WitSpace</h1>
+</body>
+</html>

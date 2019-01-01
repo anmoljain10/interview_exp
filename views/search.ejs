@@ -1,0 +1,94 @@
+<html>
+<head>
+<% include partials/head %>
+
+<style>
+<% include css/form.css %>
+.login
+{left:50%;
+top:40%;
+position:fixed;
+transform:translate(-50%,-50%);
+box-sizing:border-box;
+height:300px;
+width:500px;
+}
+
+.login h1
+{
+
+font-weight:bold;
+font-family:sans-serif;
+margin-left:6px;
+text-align:center;
+padding:20px 10px;
+}
+
+
+ul
+{
+   list-style-type: none;
+  margin: 5 10;
+  padding: 6;
+position:absolute;
+bottom:10%;
+right:40%;	
+
+}
+ul li
+{
+display:inline-block;
+padding:20px 10px;
+}
+ul li a
+{
+  text-decoration:none;
+
+}
+input[type="search"] {
+  height: var(--fh-input-height);
+  -webkit-appearance: none;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+</style>
+</head>
+<body>
+
+<div  style="float:right,position:auto">
+
+<button type="submit" class="btn btn-primary outline"style="float:right,overflow:hidden"
+onclick="document.getElementById('id01').style.display='block'"
+ >Sign Up</button>
+
+<button type="submit" class="btn btn-primary" style="float:right,overflow:hidden"
+onclick="document.getElementById('id02').style.display='block'">Login</button>
+
+
+</div>
+<% include partials/signup %>
+<% include partials/login %>
+<div class="login">
+
+
+<form method="get" action="/getdata">
+<h1>WitSpace</h1>
+<input type="search" class="form-control" width="100%" placeholder="Search"required>
+<br>
+<p align="center"><button type="submit" class="btn btn-primary" style="width:30%">Search</button>
+</p>
+</form>
+<ul>
+<li><a href="/about">About Us</a></li>
+<li><a href="/faq">Faq</a></li>
+
+</ul>
+</div>
+
+
+
+
+</body>
+</html>
