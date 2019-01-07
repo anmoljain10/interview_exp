@@ -1,38 +1,45 @@
 <html>
 <head>
 <% include partials/head %>
-
+<title>Witspace | your journey to success start now</title>
 <style>
 <% include css/form.css %>
+body
+{
+background-size:100%;
+}
 .login
 {left:50%;
-top:40%;
+top:45%;
 position:fixed;
-transform:translate(-50%,-50%);
+transform:translate(-50%,-40%);
 box-sizing:border-box;
 height:300px;
 width:500px;
 }
 
-.login h1
+.h1
 {
-
+font-size:300px
+font-style:italic;
 font-weight:bold;
-font-family:sans-serif;
+font-family:monospace;
 margin-left:6px;
 text-align:center;
-padding:20px 10px;
+padding:10px 10px;
+color: #ffffe6;
 }
 
 
 ul
 {
    list-style-type: none;
+
   margin: 5 10;
   padding: 6;
-position:absolute;
-bottom:10%;
-right:40%;	
+position:relative;
+margin-top:30px;
+margin-left:10px;	
 
 }
 ul li
@@ -53,42 +60,79 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
+
+
+blockquote {
+  position: relative;
+
+
+  font-style:italic;
+font-family:fantasy;
+  font-size:25px;
+  font-family: 'Bitter', serif;
+  color:white;
+  text-align: center;
+  }
+table
+{
+ width:inherit;
+margin-top:30px;
+ 
+}
+table tr td
+{
+padding:20px 20px;
+font-size:20px;
+
+font-family:sans-serif;
+}
+table tr td a
+{
+text-decoration:none;
+color:black;
+}
+a:hover
+{
+text-decoration:none;
+color:gray;
+}
 </style>
 </head>
-<body>
+<body background="abc.jpg">
 
-<div  style="float:right,position:auto">
+<div  style="position:auto;width:100%">
 
-<button type="submit" class="btn btn-primary outline"style="float:right,overflow:hidden"
+<button type="submit" class="btn btn-outline-dark"style="float:right;overflow:hidden;margin-top:10px;margin-right:2px"
 onclick="document.getElementById('id01').style.display='block'"
  >Sign Up</button>
 
-<button type="submit" class="btn btn-primary" style="float:right,overflow:hidden"
+<button type="submit" class="btn btn-outline-dark" style="float:right;overflow:hidden;margin-top:10px;margin-left:3px"
 onclick="document.getElementById('id02').style.display='block'">Login</button>
 
 
 </div>
+
 <% include partials/signup %>
 <% include partials/login %>
 <div class="login">
 
 
 <form method="get" action="/getdata">
-<h1>WitSpace</h1>
-<input type="search" class="form-control" width="100%" placeholder="Search"required>
+<h1 class="h1">WitSpace</h1>
+<blockquote>Your experiences can change lives</blockquote>
+<input type="search" class="form-control" width="100%" placeholder="Search"name="sear"required>
 <br>
-<p align="center"><button type="submit" class="btn btn-primary" style="width:30%">Search</button>
+<p align="center"><button type="submit" class="btn btn-dark" style="width:30%">Search</button>
 </p>
 </form>
-<ul>
-<li><a href="/about">About Us</a></li>
-<li><a href="/faq">Faq</a></li>
-
-</ul>
+<table>
+<tr>
+<td>
+<a href="about">About Us</a></td>
+<td><a href="/faq">Faq</a></td>
+<td><a href="/about/#h1">Terms and Conditions</a></td>
+</tr>
+</table>
 </div>
-
-
-
-
 </body>
 </html>

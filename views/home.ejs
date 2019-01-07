@@ -1,0 +1,43 @@
+<html>
+<head>
+<% include partials/head %>
+<style>
+<% include css/form.css %>
+
+
+
+</style>
+</head>
+<body>
+<%if (success==true) { %>
+<% include partials/header %>
+
+<% } %>
+
+<%if (success==false) { %>
+<% include partials/headerw %>
+<% include partials/signup %>
+<% include partials/login %>
+<% include sidebar %>
+<% } %>
+<div class=" col-sm-12">
+<%if (posted==true) { %>
+
+<h3><%= post._id %></h3>
+<p><%=post.post %></p>
+<% } %>
+</div>
+<div>
+<%if(posted==false) { %>
+<% for (var key in items) { %>
+<h3><%= items[key]._id %></h3>
+<p><%= items[key].post %></p>
+<p>Posted by:</p>
+<h4><%= items[key].username %></h4>
+<hr />
+<% } %>
+<% } %>
+</div>
+<% include partials/footer %>
+</body>
+</html>

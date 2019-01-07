@@ -12,13 +12,11 @@
  </form>
   <h3></h3><br>
 <p>dg</p>
-<table>
-<% for(var i=0; i < items.length; i++) { %>
-   <tr>
-     <td><%= items[i].Email %></td>
-    
-   </tr>
+
+<% for( var i=0; i < items.length ; i++) { %>
+     < li >
+          <%= items[i].interest[0] %>
+    < /li >
 <% } %>
-</table>
   </body>
 </html>
