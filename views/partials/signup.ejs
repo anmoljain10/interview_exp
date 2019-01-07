@@ -7,18 +7,18 @@
       <p>Please fill in this form to create an account.</p>
       <hr>
 	 <label for="username"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="usrname" id="username"minlength="5"onchange="return fun()"required autofocus>
-	<div class="input-requirements" id="user">
+      <input type="text" placeholder="Enter Username" name="usrname" id="username"minlength="5"onfocus="fun()"required onblur="fun()">
+	<div class="input-requirements" id="user" style="display:none">
 					<li>At least 5 characters long</li>
 					<li>Must only contain letters and numbers (no special characters)</li>
 </div>      
 
       <label for="email"><b>Email</b></label>
-      <input type="email" placeholder="Enter Email" name="email"  onchange="return fun()"required>
+      <input type="email" placeholder="Enter Email" name="email" required>
       
       <label for="psw"><b>Password</b></label>
-      <input type="password" id="password"placeholder="Enter Password" name="psw" minlength="6" maxlength="100"onchange="return fun()" required>
-<div class="input-requirements" id="pass">
+      <input type="password" id="password"placeholder="Enter Password" name="psw" minlength="6" maxlength="100" required  onfocus="funa()"onblur="funa()">
+<div class="input-requirements" id="pass"style="display:none">
 					<li>At least 8 characters long (and less than 100 characters)</li>
 					<li>Contains at least 1 number</li>
 					<li>Contains at least 1 lowercase letter</li>
@@ -32,7 +32,7 @@
       <label for="interests"><b>Interests</b></label>
 	<input type="text" placeholder="Your interests" name="interests">
 <br>
-      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+      <p>By creating an account you agree to our <a href="about/#h1" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
       <div class="clearfix">
  <input type="submit" class="button signupbtn"value="Sign Up">
@@ -240,4 +240,26 @@ function validate() {
 
 submit.addEventListener('click', validate);
 form.addEventListener('submit', validate);
+function fun()
+{
+var g=document.getElementById("user");
+
+if(g.style.display=="none")
+{g.style.display="block";
+}
+else
+{g.style.display="none";
+}
+}
+function funa()
+{
+var g=document.getElementById("pass");
+
+if(g.style.display=="none")
+{g.style.display="block";
+}
+else
+{g.style.display="none";
+}
+}
 </script>

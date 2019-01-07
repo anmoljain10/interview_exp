@@ -1,0 +1,28 @@
+<html>
+<head>
+<% include partials/head %>
+</head>
+<style>
+.center
+{
+left:50%;
+top:45%;
+position:fixed;
+transform:translate(-50%,-40%);
+box-sizing:border-box;
+height:300px;
+width:500px;
+}
+
+</style>
+<body background="io.jpg">
+<div class="center"> 
+<h2 style="text-align:center">Verify Email</h2>
+<p style="text-align:center">Open your mail and paste the token to verify your account</p>
+<form action="verify" method="POST">
+<input type="text" name="secret_token" class="form-control">
+<input type="submit" class="btn btn-primary" value="Verify">
+</form>
+</div>
+</body>
+</html>
